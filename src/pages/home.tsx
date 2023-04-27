@@ -5,7 +5,7 @@ export default function Home() {
     return(
         <div className='flex flex-col font-scpro h-screen w-screen'>
             <aside className="flex flex-row justify-between items-center p-10 lg:px-20 h-1/6">
-                <Image className='w-[100px] md:w-[150px] lg:w-[200px]' src={'/tusk.png'} width={300} height={50} alt='tusk logo'></Image>
+                <Image src={'/tusk.png'} width={200} height={40} alt='tusk logo'></Image>
                 <nav className='flex flex-row gap-5 md:gap-10 md:text-2xl text-lg'>
                     <Link className="hover:text-blue-700 hover:animate-pulse" href={'/about'}>/about</Link>
                     <Link className="hover:text-blue-700 hover:animate-pulse" href={'/blog'}>/blog</Link>
