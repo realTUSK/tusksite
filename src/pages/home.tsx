@@ -4,8 +4,8 @@ import Link from "next/link"
 export default function Home() {
     return(
         <div className='flex flex-col font-scpro h-screen w-screen'>
-            <aside className="flex flex-row justify-between items-center p-10 lg:px-20 h-1/6">
-                <Image src={'/tusk.png'} width={200} height={40} alt='tusk logo'></Image>
+            <aside className="flex flex-col gap-5 md:flex-row justify-between items-center p-10 lg:px-20 h-1/6">
+                <Image src={'/TUSK.png'} width={200} height={200} alt='tusk logo'></Image>
                 <nav className='flex flex-row gap-5 md:gap-10 md:text-2xl text-lg'>
                     <Link className="hover:text-blue-700 hover:animate-pulse" href={'/about'}>/about</Link>
                     <Link className="hover:text-blue-700 hover:animate-pulse" href={'/blog'}>/blog</Link>
@@ -17,7 +17,7 @@ export default function Home() {
                 <Image className="absolute z-10" src={'/matrixeffect.png'} alt="matrix effect" width={300} height={300}></Image>
             </main>
             <footer className="flex flex-col h-1/6 w-full p-5 gap-3 items-center justify-center">
-                <h6 className="text-sm md:text-lg text-center">© Team T.U.S.K 2022 - 2023. All rights reserved.</h6>
+                <h6 className="text-sm md:text-lg text-center">© Team T.U.S.K 2023. All rights reserved.</h6>
                 <div className="flex flex-row items-center justify-center gap-10 w-full">
                     <Image src={'/ctftime.png'} alt="ctf time logo" width={100} height={24}></Image>
                     <Link href={'https://twitter.com'} target="blank">
