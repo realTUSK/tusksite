@@ -13,7 +13,7 @@ export default function Home() {
                 </nav>
             </aside>
             <main className="flex flex-row h-4/6 p-5 lg:px-28 w-screen items-center lg:items-start justify-center">
-                <h1 className="text-3xl relative p-10 z-20 md:text-5xl lg:text-8xl flex h-100">We are VIT BhopalUniversity’s OfficialCTF Team — #TUSK2TheTop</h1>
+                <h1 className="text-3xl relative p-10 z-20 md:text-5xl lg:text-8xl flex h-100">VIT BhopalUniversity’s OfficialCTF Team — #TUSK2TheTop</h1>
                 <Image className="absolute z-10" src={'/matrixeffect.png'} alt="matrix effect" width={300} height={300}></Image>
             </main>
             <footer className="flex flex-col h-1/6 w-full p-5 gap-3 items-center justify-center">
