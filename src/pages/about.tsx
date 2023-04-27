@@ -7,14 +7,14 @@ export default function Home() {
             <aside className="flex flex-col gap-5 md:flex-row justify-between items-center p-10 lg:px-20 h-1/6">
                 <Image src={'/TUSK.png'} width={200} height={200} alt='tusk logo'></Image>
                 <nav className='flex flex-row gap-5 md:gap-10 md:text-2xl text-lg'>
-                    <Link className="hover:text-blue-700 hover:animate-pulse" href={'/about'}>/about</Link>
+                    <Link className="hover:text-blue-700 hover:animate-pulse" href={'/home'}>/home</Link>
                     <Link className="hover:text-blue-700 hover:animate-pulse" href={'/blog'}>/blog</Link>
                     <Image className="w-[30px]" src={'/flag.png'} width={50} height={50} alt="flag icon"></Image>
                 </nav>
             </aside>
-            <main className="flex flex-row h-4/6 p-5 lg:px-28 w-screen items-center justify-center">
-                <h1 className="text-3xl relative p-5 z-20 md:text-5xl lg:text-8xl flex h-100 font-bold">VIT Bhopal University’s Official CTF Team — #TUSK2TheTop</h1>
-                <Image className="absolute z-10" src={'/matrixeffect.png'} alt="matrix effect" width={300} height={300}></Image>
+            <main className="flex text-lg md:text-xl flex-col h-4/6 p-5 lg:px-28 w-screen items-start gap-10 justify-center">
+                <h1 className="text-4xl font-bold">About Us</h1>
+                <h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat quia natus sunt illo ratione necessitatibus, exercitationem accusamus cupiditate ipsam perferendis id blanditiis ducimus corporis pariatur dolorum non sed quas obcaecati.</h6>
             </main>
             <footer className="flex flex-col h-1/6 w-full p-5 gap-3 items-center justify-center">
                 <h6 className="text-sm md:text-lg text-center">© Team T.U.S.K 2023. All rights reserved.</h6>
