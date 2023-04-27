@@ -12,8 +12,9 @@ export default function Home() {
                     <Image className="w-[30px]" src={'/flag.png'} width={50} height={50} alt="flag icon"></Image>
                 </nav>
             </aside>
-            <main className="flex flex-row h-4/6 p-5 lg:px-28 w-screen items-center justify-center">
-                <h1 className="text-3xl relative p-5 z-20 md:text-5xl lg:text-8xl flex h-100 font-bold">VIT Bhopal University’s Official CTF Team — #TUSK2TheTop</h1>
+            <main className="flex flex-col h-4/6 gap-10 p-5 lg:px-28 w-screen items-start justify-center">
+                <h1 className="text-3xl relative z-20 md:text-5xl lg:text-8xl flex h-100 font-bold">VIT Bhopal University’s Official CTF Team — #TUSK2TheTop</h1>
+                <Link className="relative z-20 text-lg border-blue-700 border-2 p-5 hover:bg-blue-700 hover:text-white" href={'/'}>Play recruitment CTF</Link>
                 <Image className="absolute z-10" src={'/matrixeffect.png'} alt="matrix effect" width={300} height={300}></Image>
             </main>
             <footer className="flex flex-col h-1/6 w-full p-5 gap-3 items-center justify-center">
