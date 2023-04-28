@@ -16,6 +16,9 @@ module.exports = {
         "scpro": ["Source Code Pro"],
         "inconso": ["Inconsolata"],
       },
+      colors: {
+        'tusklet': '#d907fb',
+      },
     },
   },
   plugins: [],
