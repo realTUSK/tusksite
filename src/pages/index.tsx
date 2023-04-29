@@ -22,8 +22,8 @@ export default function Landing() {
           className="relative w-8/12 md:w-2/5 lg:w-1/5 drop-shadow-[0_0_0.5rem_#ffffff70]"
           src={'/tusk.png'}
           alt="TUSK Logo"
-          width={300}
-          height={300}
+          width={50}
+          height={50}
           priority={true}
         />
       </div>
