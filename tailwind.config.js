@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -13,8 +14,8 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       fontFamily: {
-        "scpro": ["Source Code Pro"],
-        "inconso": ["Inconsolata"],
+        "scpro": ['var(--font-scpro)'],
+        "inconso": ['var(--font-inconso)'],
       },
       colors: {
         'tusklet': '#d907fb',

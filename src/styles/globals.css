@@ -26,7 +26,3 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-
-.flag-cursor {
-  cursor: url('/public/flag.png');
-}
