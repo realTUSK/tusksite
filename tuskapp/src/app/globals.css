@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  box-sizing: border-box;
+}
+
+a {
+  color: #d907fb;
+}
+
+ol {
+  padding: 20px 0px;
+}
+
+code {
+  font-family: monospace;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  padding: 5px;
+}
