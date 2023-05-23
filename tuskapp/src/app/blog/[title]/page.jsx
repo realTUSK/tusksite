@@ -16,7 +16,7 @@ export default function Post({ params }) {
             <main className="flex text-lg py-10 pt-20 md:text-xl flex-col h-max min-h-[65vh] lg:h-4/6 w-8/12 self-center items-start gap-10 justify-center">
                 <h1 className="text-4xl md:text-5xl text-tusklet font-bold">{title}</h1>
                 <h3 className='text-tusklet'>{date} | written by {author}</h3>
-                <div dangerouslySetInnerHTML={{__html: marked.parse(post.content)}}></div>
+                <div dangerouslySetInnerHTML={{__html: marked(post.content)}}></div>
             </main>
             <Footer />
         </div>
