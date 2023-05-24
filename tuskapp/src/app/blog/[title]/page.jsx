@@ -38,6 +38,7 @@ export default function Post({ params }) {
 }
 
 function getPost(title) {
+    const files = fs.readdirSync('posts')
     const markdownData = fs.readFileSync(`posts/${title}.md`, 'utf-8')
     const post = matter(markdownData)
     return {
