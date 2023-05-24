@@ -1,6 +1,11 @@
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 
+export const metadata = {
+    title: 'About TUSK',
+    description: 'answering all your questions about us',
+  }
+
 export default function About() {
     return(
         <div className='flex select-none flex-col font-scpro h-max min-h-screen p-3 w-screen'>

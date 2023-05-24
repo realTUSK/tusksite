@@ -5,6 +5,11 @@ import matter from "gray-matter"
 import fs from 'fs'
 import path from 'path'
 
+export const metadata = {
+    title: 'The TUSK Blog',
+    description: 'Team TUSK\'s kooky experiments',
+}
+
 export default function Home() {
     const posts = getPosts()
     return(
@@ -25,10 +30,10 @@ export default function Home() {
 }
 
 function getPosts() {
-    const files = fs.readdirSync(path.join('src', 'posts'))
+    const files = fs.readdirSync('posts')
     const posts = files.map((filename) => {
         const slug = filename.replace('.md', '')
-        const markdownData = fs.readFileSync(path.join('src', 'posts', filename), 'utf-8')
+        const markdownData = fs.readFileSync(('posts/' + filename), 'utf-8')
         const frontmatter = matter(markdownData)
         return {
             slug: slug,
