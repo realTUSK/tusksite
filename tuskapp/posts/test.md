@@ -11,7 +11,9 @@ description: 'Getting started with blog engines'
 * hi
 * hello
 
-> test this
+> our logo
+
+![images/pico-8 demo](/resources/tusk.png)
 
 ```js
 alert();

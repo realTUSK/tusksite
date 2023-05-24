@@ -1,45 +1,33 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import Head from 'next/head'
 import ReactMarkdown from 'react-markdown'
+import getSingleMetadata from '@/components/getSingleMetadata'
+import getAllMetadata from '@/components/getAllMetadata'
+import getPost from '@/components/getPost'
 
-export function generateMetadata({ params }) {
-    const slug = params.title
-    const post = getPost(slug)
-    const {title, author, excerpt} = post.metadata
-    return {
-        title: 'TUSK Article: ' + title,
-        author: author,
-        description: excerpt,
-    }
-}
+// export function generateMetadata(props) {
+//     const slug = props.params.title
+//     const post = getSingleMetadata(slug)
+//     const {title, author, excerpt} = post.metadata
+//     return {
+//         title: 'TUSK Article: ' + title,
+//         author: author,
+//         description: excerpt,
+//     }
+// }
 
-export function generateStaticParams() {
-    const files = fs.readdirSync('posts')
-    return files.map((filename) => {
-        const slug = filename.replace('.md', '')
-        return {
-            slug: slug
-        }
-    })
-}
+export const generateStaticParams = async () => {
+    const posts = getAllMetadata();
+    return posts.map((post) => ({
+        slug: post.slug,
+    }));
+};
 
-function getPost(title) {
-    const markdownFile = fs.readFileSync(`posts/${title}.md`)
-    const post = matter(markdownFile)
-    return {
-        metadata: post.data,
-        content: post.content,
-    }
-}
+export default function Post(props) {
 
-export default function Post({ params }) {
-
-    const post = getPost(params.title)
-    const {title, date, author, excerpt} = post.metadata
+    const slug = props.params.slug
+    const post = getPost(slug);
+    const {title, date, author, excerpt} = post.data
 
     return(
         <>

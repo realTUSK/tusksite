@@ -1,9 +1,7 @@
 import Footer from "@/components/Footer"
 import Header from "@/components/Header.jsx"
 import Card from "@/components/Card"
-import matter from "gray-matter"
-import fs from 'fs'
-import path from 'path'
+import getAllMetadata from "@/components/getAllMetadata"
 
 export const metadata = {
     title: 'The TUSK Blog',
@@ -11,9 +9,9 @@ export const metadata = {
 }
 
 export default function Home() {
-    const posts = getPosts()
+    const posts = getAllMetadata()
     return(
-        <div className='flex flex-col select-none font-scpro p-3 h-max min-h-screen'>
+        <div className='flex flex-col select-none font-scpro p-3 h-max min-h-screen w-screen'>
             <Header />
             <main className="flex flex-row flex-wrap gap-10 py-10 self-center h-max min-h-[65vh] items-center justify-center">
                 {
@@ -27,18 +25,4 @@ export default function Home() {
             <Footer />
         </div>
     )
-}
-
-function getPosts() {
-    const files = fs.readdirSync(path.join('', 'posts'))
-    const posts = files.map((filename) => {
-        const slug = filename.replace('.md', '')
-        const markdownData = fs.readFileSync(path.join('', 'posts', filename), 'utf-8')
-        const frontmatter = matter(markdownData)
-        return {
-            slug: slug,
-            metadata: frontmatter.data
-        }
-    })
-    return posts
 }
