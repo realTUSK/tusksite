@@ -38,7 +38,7 @@ export default function Post({ params }) {
 }
 
 function getPost(title) {
-    const files = fs.readdirSync(path.join('posts'))
+    const files = fs.readdirSync('posts')
     const posts = files.map((filename) => {
         const slug = filename.replace('.md', '')
         const markdownData = fs.readFileSync(('posts/' + filename), 'utf-8')
