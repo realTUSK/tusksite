@@ -30,10 +30,10 @@ export default function Home() {
 }
 
 function getPosts() {
-    const files = fs.readdirSync('posts')
+    const files = fs.readdirSync(path.join('public', 'posts'))
     const posts = files.map((filename) => {
         const slug = filename.replace('.md', '')
-        const markdownData = fs.readFileSync(('posts/' + filename), 'utf-8')
+        const markdownData = fs.readFileSync(path.join('public', 'posts', filename), 'utf-8')
         const frontmatter = matter(markdownData)
         return {
             slug: slug,
