@@ -5,16 +5,13 @@ import getSingleMetadata from '@/components/getSingleMetadata'
 import getAllMetadata from '@/components/getAllMetadata'
 import getPost from '@/components/getPost'
 
-// export function generateMetadata(props) {
-//     const slug = props.params.title
-//     const post = getSingleMetadata(slug)
-//     const {title, author, excerpt} = post.metadata
-//     return {
-//         title: 'TUSK Article: ' + title,
-//         author: author,
-//         description: excerpt,
-//     }
-// }
+export async function generateMetadata() {
+    return {
+        title: 'TUSK Blog Post: TITLE',
+        author: 'AUTHOR',
+        description: 'DESCRIPTION',
+    }
+}
 
 export const generateStaticParams = async () => {
     const posts = getAllMetadata();
@@ -23,9 +20,9 @@ export const generateStaticParams = async () => {
     }));
 };
 
-export default function Post(props) {
+export default function Post({ params }) {
 
-    const slug = props.params.slug
+    const slug = params.slug
     const post = getPost(slug);
     const {title, date, author, excerpt} = post.data
 
