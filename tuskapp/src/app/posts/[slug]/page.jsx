@@ -7,7 +7,7 @@ import getPost from '@/components/getPost'
 
 export async function generateMetadata() {
     return {
-        title: 'TUSK Article',
+        title: 'Solves by TUSK Team',
         author: 'AUTHOR',
         description: 'DESCRIPTION',
     }
