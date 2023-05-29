@@ -28,23 +28,28 @@ export default function Post({ params }) {
 
     return(
         <>
-            <div className='flex flex-col font-scpro h-max min-h-screen p-3 w-screen'>
+            <div className='flex flex-col font-scpro h-max w-screen'>
                 <Header />
-                <main className="flex text-lg py-10 pt-20 md:text-xl flex-col h-max min-h-[65vh] lg:h-4/6 w-8/12 self-center items-start gap-10 justify-center">
-                    <h1 className="text-4xl md:text-5xl text-tusklet font-bold">{title}</h1>
-                    <h3 className='text-tusklet'>{date} | written by {author}</h3>
+                <main className="flex w-screen text-lg p-10 md:text-xl flex-col self-center h-max items-center gap-10 justify-center">
                     <article className='
-                    prose prose-invert 
-                    prose-headings:text-tusklet 
-                    prose-a:text-tusklet 
-                    prose-a:underline 
-                    hover:prose-a:text-white 
-                    text-white prose-slate 
-                    prose-strong:text-white 
-                    prose-blockquote:text-white 
-                    prose-code:text-white
-                    lg:prose-xl'
-                    ><ReactMarkdown>{post.content}</ReactMarkdown></article>
+                        flex flex-col h-max w-11/12 self-center
+                        prose prose-invert 
+                        prose-headings:text-tusklet 
+                        prose-a:text-tusklet 
+                        prose-a:underline 
+                        hover:prose-a:text-white 
+                        text-white prose-slate 
+                        prose-strong:text-white 
+                        prose-blockquote:text-white 
+                        prose-code:text-white
+                        lg:prose-xl'
+                    >
+                        <section>
+                            <h1 className="text-4xl md:text-5xl text-tusklet font-bold">{title}</h1>
+                            <h3 className='text-tusklet'>{date} | written by {author}</h3>
+                        </section>
+                        <ReactMarkdown>{post.content}</ReactMarkdown>
+                    </article>
                 </main>
                 <Footer />
             </div>
