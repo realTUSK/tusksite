@@ -1,25 +1,28 @@
 import './globals.css'
-import { Inconsolata, Source_Code_Pro } from 'next/font/google'
-import Head from 'next/head'
+import { Source_Code_Pro, Source_Sans_3 } from 'next/font/google'
 
-const inconso = Inconsolata({
-  weight: ['400', '700'],
-  style: ['normal'],
+export const sourceCodePro = Source_Code_Pro({
   subsets: ['latin'],
-  variable: '--font-inconso',
+  display: 'swap',
+  style: ['normal'],
+  weights: ['400', '700'],
+  variable: '--font-scp',
+  fallback: ['monospace'],
 })
 
-const scpro = Source_Code_Pro({
-  weight: ['400', '700'],
-  style: ['normal'],
+export const sourceSans3 = Source_Sans_3({
   subsets: ['latin'],
-  variable: '--font-scpro',
+  display: 'swap',
+  style: ['normal'],
+  weights: ['400', '700'],
+  variable: '--font-ssp',
+  fallback: ['sans-serif'],
 })
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inconso.variable} ${scpro.variable} bg-black text-white`}>{children}</body>
+      <body className={`${sourceCodePro.variable} ${sourceSans3.variable} bg-black text-white`}>{children}</body>
     </html>
   )
 }

@@ -13,8 +13,8 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       fontFamily: {
-        "scpro": ['var(--font-scpro)'],
-        "inconso": ['var(--font-inconso)'],
+        mono: ['var(--font-scp)'],
+        sans: ['var(--font-ssp)'],
       },
       colors: {
         'tusklet': '#d907fb',
